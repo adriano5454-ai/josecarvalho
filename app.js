@@ -1,0 +1,50 @@
+const nav = document.querySelector('.nav');
+const toggle = document.querySelector('.menu-toggle');
+function closeMenu() { if (!toggle || !nav) return; toggle.setAttribute('aria-expanded', 'false'); nav.classList.remove('is-open'); }
+toggle?.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); nav?.classList.toggle('is-open', open); });
+nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
+document.addEventListener('click', event => { if (!nav?.contains(event.target) && !toggle?.contains(event.target)) closeMenu(); });
+const contactBar = document.querySelector('.mobile-contact');
+const primaryCta = document.querySelector('.hero-actions .button');
+if (contactBar) {
+  if (primaryCta) {
+    const updateContactBar = () => { contactBar.hidden = primaryCta.getBoundingClientRect().bottom > 0; };
+    updateContactBar();
+    let frame = 0;
+    const scheduleUpdate = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => { frame = 0; updateContactBar(); });
+    };
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener('pageshow', updateContactBar);
+  } else {
+    contactBar.hidden = false;
+  }
+}
+const form = document.querySelector('.quote-form');
+if (form) {
+  const requestedService = new URLSearchParams(window.location.search).get('servico');
+  const service = requestedService === 'Cortinas' ? 'Cortinas a seco' : requestedService;
+  const serviceInput = form.elements.namedItem('servico');
+  if (service && Array.from(serviceInput.options).some(option => option.value === service)) serviceInput.value = service;
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const name = String(data.get('nome') || '').trim();
+    const bairro = String(data.get('bairro') || '').trim();
+    const message = String(data.get('mensagem') || '').trim();
+    const lines = ['Olá, Zé! Gostaria de solicitar um orçamento.', '', `Serviço: ${data.get('servico')}`];
+    if (name) lines.push(`Nome: ${name}`);
+    if (bairro) lines.push(`Bairro / região: ${bairro}`);
+    if (message) lines.push('', `Detalhes: ${message}`);
+    lines.push('', 'Podemos conversar sobre a avaliação e a disponibilidade?');
+    const text = lines.join('\n');
+    if (event.submitter?.dataset.channel === 'email') {
+      window.location.href = `mailto:josecarvalho121057@gmail.com?subject=${encodeURIComponent('Pedido de orçamento — ' + data.get('servico'))}&body=${encodeURIComponent(text)}`;
+    } else {
+      window.location.href = `https://wa.me/5521998222062?text=${encodeURIComponent(text)}`;
+    }
+  });
+}

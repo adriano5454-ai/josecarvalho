@@ -62,12 +62,10 @@ if (commentForm) {
     nameInput.setCustomValidity(name.length < 2 || name.length > 80 ? 'Informe um nome entre 2 e 80 caracteres.' : '');
     commentInput.setCustomValidity(comment.length < 10 || comment.length > 1200 ? 'Escreva um comentário entre 10 e 1.200 caracteres.' : '');
     if (!commentForm.reportValidity()) return;
-    const service = String(data.get('servico_comentario') || '').trim();
     const consent = data.get('autoriza_publicacao') === 'sim';
     const lines = ['Olá, Zé! Quero compartilhar minha experiência com a LAVA MAIS.', '', `Nome para publicação: ${name}`];
-    if (service) lines.push(`Serviço: ${service}`);
     lines.push('', `Comentário: ${comment}`, '', consent
-      ? 'Autorizo a publicação do meu nome, serviço e comentário após aprovação.'
+      ? 'Autorizo a publicação do meu nome e comentário após aprovação.'
       : 'Não autorizo a publicação. Este comentário é um feedback privado.');
     const message = lines.join('\n');
     if (event.submitter?.dataset.channel === 'email') {
@@ -76,4 +74,5 @@ if (commentForm) {
       window.location.href = `https://wa.me/5521998222062?text=${encodeURIComponent(message)}`;
     }
   });
+  commentForm.querySelectorAll('button[data-channel]').forEach(button => { button.disabled = false; });
 }

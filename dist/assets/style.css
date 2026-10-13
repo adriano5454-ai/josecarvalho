@@ -22,19 +22,50 @@
 @media(max-width:1000px) and (min-width:651px){.site-header{height:88px}.site-header .brand{width:280px}}
 @media(max-width:650px){.site-header{height:88px}.header-inner{gap:16px}.site-header .brand{width:240px;flex-shrink:1}.menu-toggle{flex-shrink:0}.nav{top:87px}}
 
-.comments-section{border-top:1px solid #d8ded2;padding-block:70px 85px}
-.comments-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
-.comments-intro p{font-size:14px;color:#596653;max-width:330px}
-.comment-form{background:#fffef9;border:1px solid #d7dec9;padding:30px;border-radius:3px}
-.comment-form h3{font-family:Georgia,serif;font-size:25px;margin-bottom:6px}
-.comment-form .field textarea{min-height:140px}
-.comment-form .form-privacy,.comment-form .form-intro{color:#596653}
-.comment-consent{display:flex;align-items:flex-start;gap:10px;margin:6px 0 20px;font-size:12px;line-height:1.7;color:#596653;cursor:pointer}
-.comment-consent input{width:17px;height:17px;margin:2px 0 0;flex:none;accent-color:#16864C}
-.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px;margin-bottom:45px}
-.testimonial-card{border:1px solid #d7dec9;background:#fffef9;padding:25px;border-radius:3px;overflow-wrap:anywhere}
+/* Feedback has a compact, separate visual treatment from the quote form. */
+.comments-section{padding-block:55px 65px;border-top:1px solid #d8ded2}
+.comments-panel{max-width:780px;margin-inline:auto;padding:30px 34px;background:#EDF2F1;border:1px solid #d5e2dc;border-radius:18px}
+.comments-heading{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px}
+.comment-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;flex:none;background:#dce9e4;color:#153C42}
+.comment-mark svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6}
+.comments-heading .eyebrow{font-size:10px;margin-bottom:10px;letter-spacing:.13em;color:#2b685f}
+.comments-heading .eyebrow:before{display:none}
+.comments-heading h2{font-size:32px;line-height:1.2;margin-bottom:10px;letter-spacing:-.035em}
+.comment-intro{font-size:13px;line-height:1.7;max-width:580px;margin:0;color:#596653}
+.comment-form{padding:0;background:transparent;border:0}
+.comment-name{max-width:320px}
+.comment-form .field label{font-size:12px}
+.comment-form .field input,.comment-form .field textarea{border-color:#b8ccc2;background:#fffef9;border-radius:7px;font-size:14px}
+.comment-form .field textarea{min-height:120px}
+.comment-consent{display:flex;align-items:flex-start;gap:10px;margin:8px 0 22px;font-size:12px;line-height:1.7;color:#596653;cursor:pointer}
+.comment-consent input{width:17px;height:17px;margin:2px 0 0;flex:none;accent-color:#153C42}
+.comment-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.comment-submit{background:#153C42;border-color:#153C42;border-radius:999px;min-height:46px;font-size:13px;padding:12px 22px}
+.comment-submit:hover{background:#0d2e34;border-color:#0d2e34}
+.comment-submit:disabled{opacity:.65;cursor:default}
+.comment-submit:disabled:hover{transform:none;background:#153C42;border-color:#153C42}
+.comment-email{border:0;background:transparent;padding:10px 0;min-height:44px;font-size:12px;color:#153C42;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.comment-email:disabled{opacity:.65;cursor:default}
+.comment-form .form-privacy{font-size:11px;line-height:1.7;color:#596653;margin:17px 0 0}
+.comment-fallback{font-size:13px;color:#596653;margin-top:20px}
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px;margin-bottom:30px}
+.testimonial-card{border:1px solid #d7dec9;background:#fffef9;padding:25px;border-radius:12px;overflow-wrap:anywhere}
 .testimonial-quote{font-family:Georgia,serif;font-size:20px;line-height:1.65;color:#163A4A}
 .testimonial-person{display:flex;flex-direction:column;gap:3px;font-size:12px;color:#596653;margin:0}
 .testimonial-person strong{color:#163A4A;font-weight:600}
-@media(max-width:850px){.comments-grid{gap:35px}.comment-form{padding:24px}}
-@media(max-width:650px){.comments-section{padding-block:50px 55px}.comments-grid{grid-template-columns:1fr;gap:22px}.comments-intro h2{font-size:42px}.comments-intro p{font-size:13px}.comment-form{padding:23px 19px}.comment-consent{font-size:13px}.testimonial-grid{gap:16px;margin-bottom:28px}}
+@media(max-width:1100px){.header-cta{display:none}}
+@media(max-width:850px){.menu-toggle{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;background:#F7F5ED;border-bottom:1px solid #c9d2bf;padding:22px;flex-direction:column;gap:19px;align-items:stretch;box-shadow:0 12px 18px #24372a0a}.nav.is-open{display:flex}.nav a{font-size:14px;padding:4px}}
+@media(max-width:650px){.comments-section{padding-block:38px 45px}.comments-panel{padding:23px 20px;border-radius:14px}.comments-heading{gap:12px;margin-bottom:20px}.comment-mark{width:34px;height:34px;border-radius:10px}.comment-mark svg{width:21px;height:21px}.comments-heading .eyebrow{font-size:9px;letter-spacing:.09em}.comments-heading h2{font-size:26px}.comment-intro{font-size:13px}.comment-name{max-width:none}.comment-form .field input,.comment-form .field textarea{font-size:16px}.comment-consent{font-size:13px}.comment-actions{gap:6px;flex-direction:column;align-items:stretch}.comment-submit{width:100%;font-size:13px}.comment-email{align-self:center}.comment-form .form-privacy{font-size:11px}.testimonial-grid{gap:16px;margin-bottom:24px}}
+
+/* Experiência e tecnologia: destaques nas páginas comerciais. */
+.hero-copy>p.experience-badge{display:inline-flex;align-items:center;gap:10px;max-width:100%;margin:0 0 20px;padding:7px 14px;background:#E8EEDC;border:1px solid #d5dfc9;border-radius:50px;color:#163A4A;font-size:12px;line-height:1.35}
+.experience-badge strong{color:#16864C;font-size:23px;line-height:1;font-weight:700;letter-spacing:-.04em}
+.experience-badge span{font-weight:600}
+.experience-strip{border-block:1px solid #d8ded2;background:#F0F2E8}
+.experience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-block:29px;gap:30px}
+.experience-item{min-width:0;padding-right:28px;border-right:1px solid #d8ded2}
+.experience-item:last-child{padding-right:0;border-right:0}
+.experience-item h3{font-size:18px;font-weight:600;line-height:1.35;letter-spacing:-.02em;margin:0 0 8px}
+.experience-item p{font-size:13px;line-height:1.7;color:#627068;margin:0;max-width:310px}
+@media(max-width:850px){.experience-grid{gap:20px}.experience-item{padding-right:18px}.experience-item h3{font-size:16px}.hero-copy>p.experience-badge{font-size:12px}}
+@media(max-width:650px){.hero-copy>p.experience-badge{margin-bottom:22px;padding:8px 14px}.experience-grid{grid-template-columns:1fr;gap:0;padding-block:8px}.experience-item{padding:19px 0;border-right:0;border-bottom:1px solid #d8ded2}.experience-item:last-child{padding:19px 0;border-bottom:0}.experience-item h3{font-size:18px;margin-bottom:6px}.experience-item p{font-size:14px;max-width:none}}

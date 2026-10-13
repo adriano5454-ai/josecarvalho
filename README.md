@@ -55,3 +55,11 @@ A barra fixa de WhatsApp/e-mail fica oculta na abertura. Ela aparece quando o bo
 Marca maior no cabeçalho, com uma versão do SVG sem excesso de espaço vazio (`logo-site.svg`). O vetor mestre e a identidade aprovados foram preservados.
 
 O formulário de comentários envia a mensagem pelo WhatsApp ou e-mail escolhido pelo cliente. Revisão e aprovação são manuais. Só comentários reais, aprovados e autorizados entram em `content/comentarios-aprovados.json`; o Render atualiza o HTML no build. Não existe uma fila automática de envios nem um painel administrativo. O arquivo começa vazio, sem avaliações ou depoimentos fictícios. Veja `COMENTARIOS.md` para receber, publicar e retirar comentários.
+
+## Comentários no celular v1.8
+
+Caixa compacta com visual próprio, disponível na página inicial e nas quatro páginas de serviço, antes da área de contato. O menu tem acesso a Comentários. Apenas nome e texto são pedidos; autorização continua opcional. O formulário permanece visível sem JavaScript, com orientação de envio direto; os botões que preparam a mensagem só são habilitados quando os eventos estão registrados.
+
+## Experiência e tecnologia v1.9
+
+Mais de 10 anos de experiência profissional, atendimento aos clientes mais exigentes e uso de equipamentos de alta tecnologia, conforme informações fornecidas pelo responsável. Destaque na abertura e em uma faixa de diferenciais nas cinco páginas comerciais; reforço na seção Nosso cuidado e nos metadados da página inicial. A experiência não foi usada como data de fundação do CNPJ. Agilidade no atendimento, sem promessas de prazo ou secagem imediata.

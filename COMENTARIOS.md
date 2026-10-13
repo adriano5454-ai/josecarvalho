@@ -5,7 +5,7 @@ Esta versão continua sendo um Static Site no Render. O cliente escreve na pági
 ## Receber e revisar
 
 1. Leia o comentário recebido no WhatsApp ou e-mail da empresa.
-2. Confira se a experiência é real e se o cliente autorizou publicar nome, serviço e texto. A mensagem enviada pelo formulário registra essa escolha.
+2. Confira se a experiência é real e se o cliente autorizou publicar nome e texto. A mensagem enviada pelo formulário registra essa escolha. Se acrescentar um rótulo de serviço ao comentário, confirme essa informação e a autorização com o cliente.
 3. Se a mensagem disser que o comentário é privado, não publique. Se quiser editar o texto ou nome, combine a versão final com o cliente.
 4. Guarde os comentários pendentes e os dados do atendimento no canal de contato. Não coloque mensagens pendentes, telefone, e-mail ou outros dados privados no repositório público.
 
@@ -28,6 +28,8 @@ Adicione somente comentários reais, aprovados e autorizados, seguindo esta estr
 ```
 
 `service` é opcional. Nome: até 80 caracteres. Comentário: de 10 a 1.200 caracteres. Serviço: até 80 caracteres. Separe vários registros por vírgula e mantenha o JSON válido.
+
+O formulário da versão 1.8 pede apenas nome e comentário, para ficar mais simples no celular. A caixa aparece nas cinco páginas comerciais e pode ser acessada pelo item **Comentários** do menu, antes do pedido de orçamento.
 
 Confirme com **Commit changes**. O build `node render-build.mjs` valida o arquivo e inclui os comentários aprovados na página inicial. Com o deploy automático ativado, a atualização segue para o Render; caso contrário, faça o deploy do último commit.
 

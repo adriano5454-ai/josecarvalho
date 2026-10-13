@@ -4,7 +4,7 @@ Site estático em português, responsivo, com página inicial, quatro páginas d
 
 ## Manutenção
 
-Conteúdo e metadados: `build_site.py`. Layout: `dist/assets/style.css`. Interações: `dist/assets/app.js`. Rode `python3 build_site.py` após editar conteúdo. O build no Render usa `node render-build.mjs` sobre as páginas já geradas; não instala dependências.
+Conteúdo e metadados: `build_site.py`. Layout: `dist/assets/style.css`. Interações: `dist/assets/app.js`. Rode `python3 build_site.py` após editar conteúdo; o gerador usa Node para renderizar os comentários aprovados com a mesma validação do Render. O build no Render usa `node render-build.mjs` sobre as páginas já geradas; não instala dependências.
 
 ## Contatos e identidade
 
@@ -49,3 +49,9 @@ Links, seleção de serviço e mensagens por WhatsApp/e-mail conferidos. Contras
 ## Contato no celular v1.6
 
 A barra fixa de WhatsApp/e-mail fica oculta na abertura. Ela aparece quando o botão principal de orçamento passa acima da tela e se oculta ao retornar. Nas páginas sem botão principal, o contato rápido permanece disponível. Sem JavaScript, os links de contato da página continuam acessíveis.
+
+## Marca e comentários v1.7
+
+Marca maior no cabeçalho, com uma versão do SVG sem excesso de espaço vazio (`logo-site.svg`). O vetor mestre e a identidade aprovados foram preservados.
+
+O formulário de comentários envia a mensagem pelo WhatsApp ou e-mail escolhido pelo cliente. Revisão e aprovação são manuais. Só comentários reais, aprovados e autorizados entram em `content/comentarios-aprovados.json`; o Render atualiza o HTML no build. Não existe uma fila automática de envios nem um painel administrativo. O arquivo começa vazio, sem avaliações ou depoimentos fictícios. Veja `COMENTARIOS.md` para receber, publicar e retirar comentários.

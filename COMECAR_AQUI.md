@@ -39,6 +39,10 @@ Após conectar seu domínio no Render, adicione a variável `SITE_URL` com a ori
 
 O site está preparado tecnicamente para SEO. Posição e prazo para aparecer no Google dependem do rastreamento, da concorrência e do trabalho de marketing; não são garantidos.
 
+## Comentários de clientes
+
+O formulário prepara comentários para envio pelo WhatsApp ou e-mail. A publicação depende de revisão manual e autorização do cliente. Use `content/comentarios-aprovados.json` para manter apenas os textos aprovados; `COMENTARIOS.md` explica o procedimento. O build do Render atualiza essa seção sem precisar editar HTML.
+
 ## Contato já configurado
 
 - WhatsApp: +55 21 99822-2062.

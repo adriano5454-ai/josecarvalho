@@ -15,3 +15,26 @@
 .button.secondary{color:#106B3C}
 .no-js-contact{font-size:14px;margin:0}
 .mobile-contact[hidden]{display:none}
+
+/* A tighter SVG frame gives the approved brand more presence. */
+.site-header .brand{width:300px;max-width:none;min-width:0}
+.site-header .brand-logo{width:100%;height:auto;max-height:none}
+@media(max-width:1000px) and (min-width:651px){.site-header{height:88px}.site-header .brand{width:280px}}
+@media(max-width:650px){.site-header{height:88px}.header-inner{gap:16px}.site-header .brand{width:240px;flex-shrink:1}.menu-toggle{flex-shrink:0}.nav{top:87px}}
+
+.comments-section{border-top:1px solid #d8ded2;padding-block:70px 85px}
+.comments-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+.comments-intro p{font-size:14px;color:#596653;max-width:330px}
+.comment-form{background:#fffef9;border:1px solid #d7dec9;padding:30px;border-radius:3px}
+.comment-form h3{font-family:Georgia,serif;font-size:25px;margin-bottom:6px}
+.comment-form .field textarea{min-height:140px}
+.comment-form .form-privacy,.comment-form .form-intro{color:#596653}
+.comment-consent{display:flex;align-items:flex-start;gap:10px;margin:6px 0 20px;font-size:12px;line-height:1.7;color:#596653;cursor:pointer}
+.comment-consent input{width:17px;height:17px;margin:2px 0 0;flex:none;accent-color:#16864C}
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px;margin-bottom:45px}
+.testimonial-card{border:1px solid #d7dec9;background:#fffef9;padding:25px;border-radius:3px;overflow-wrap:anywhere}
+.testimonial-quote{font-family:Georgia,serif;font-size:20px;line-height:1.65;color:#163A4A}
+.testimonial-person{display:flex;flex-direction:column;gap:3px;font-size:12px;color:#596653;margin:0}
+.testimonial-person strong{color:#163A4A;font-weight:600}
+@media(max-width:850px){.comments-grid{gap:35px}.comment-form{padding:24px}}
+@media(max-width:650px){.comments-section{padding-block:50px 55px}.comments-grid{grid-template-columns:1fr;gap:22px}.comments-intro h2{font-size:42px}.comments-intro p{font-size:13px}.comment-form{padding:23px 19px}.comment-consent{font-size:13px}.testimonial-grid{gap:16px;margin-bottom:28px}}

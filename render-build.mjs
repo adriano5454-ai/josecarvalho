@@ -1,6 +1,7 @@
 // Uses prebuilt static pages; no dependencies or framework installation required.
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { readApprovedComments, renderApprovedComments } from './render-comments.mjs';
 const output = join(import.meta.dirname, 'dist');
 const files = [];
 function visit(dir) {
@@ -18,12 +19,18 @@ if (target.protocol !== 'https:' || target.username || target.password || target
   throw new Error('SITE_URL must be an HTTPS origin, with no path, query, fragment or credentials.');
 }
 const previous = new Set([current]);
+// Only explicitly approved and authorized comments can enter the published HTML.
+const approvedComments = renderApprovedComments(readApprovedComments(join(import.meta.dirname, 'content/comentarios-aprovados.json')));
 for (const file of files.filter(file => file.endsWith('.html'))) {
   const match = readFileSync(file, 'utf8').match(/<link rel="canonical" href="([^"]+)"/);
   if (match) previous.add(new URL(match[1]).origin);
 }
 for (const file of files) {
   let content = readFileSync(file, 'utf8');
+  if (file.endsWith('.html')) {
+    content = content.replace(/<!-- approved-comments:start -->[\s\S]*?<!-- approved-comments:end -->/g,
+      () => '<!-- approved-comments:start -->' + approvedComments + '<!-- approved-comments:end -->');
+  }
   for (const old of previous) content = content.split(old).join(target.origin);
   writeFileSync(file, content);
 }

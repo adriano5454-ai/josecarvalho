@@ -29,9 +29,9 @@ Adicione somente comentários reais, aprovados e autorizados, seguindo esta estr
 
 `service` é opcional. Nome: até 80 caracteres. Comentário: de 10 a 1.200 caracteres. Serviço: até 80 caracteres. Separe vários registros por vírgula e mantenha o JSON válido.
 
-O formulário da versão 1.8 pede apenas nome e comentário, para ficar mais simples no celular. A caixa aparece nas cinco páginas comerciais e pode ser acessada pelo item **Comentários** do menu, antes do pedido de orçamento.
+O formulário pede apenas nome e comentário, para ficar mais simples no celular. A caixa aparece nas cinco páginas comerciais e pode ser acessada pelo item **Comentários** do menu, antes do pedido de orçamento.
 
-Confirme com **Commit changes**. O build `node render-build.mjs` valida o arquivo e inclui os comentários aprovados na página inicial. Com o deploy automático ativado, a atualização segue para o Render; caso contrário, faça o deploy do último commit.
+Confirme com **Commit changes**. O build `node render-build.mjs` valida o arquivo e inclui os comentários aprovados na página inicial e nas quatro páginas de serviço. Com o deploy automático ativado, a atualização segue para o Render; caso contrário, faça o deploy do último commit.
 
 Não é preciso alterar o HTML nem rodar Python para publicar ou remover comentários. Para retirar um comentário, apague seu registro do JSON e confirme a alteração.
 

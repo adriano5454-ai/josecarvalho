@@ -63,3 +63,21 @@ Caixa compacta com visual próprio, disponível na página inicial e nas quatro 
 ## Experiência e tecnologia v1.9
 
 Mais de 10 anos de experiência profissional, atendimento aos clientes mais exigentes e uso de equipamentos de alta tecnologia, conforme informações fornecidas pelo responsável. Destaque na abertura e em uma faixa de diferenciais nas cinco páginas comerciais; reforço na seção Nosso cuidado e nos metadados da página inicial. A experiência não foi usada como data de fundação do CNPJ. Agilidade no atendimento, sem promessas de prazo ou secagem imediata.
+
+## Revisão geral v1.10
+
+Corrigidos: navegação de Dúvidas e Contato dentro das páginas de serviço; contatos rápidos com o serviço da página na mensagem; rótulo neutro de nome nos comentários; alternativas de WhatsApp/e-mail disponíveis se o script não carregar; botões habilitados somente após registro dos eventos; contraste de placeholders, rodapé e foco no fundo escuro; botão Menu com altura mínima de 44 px.
+
+O build valida nomes de domínio e portas e preserva o texto autorizado dos comentários durante mudanças de domínio. A documentação agora informa a publicação nas cinco páginas comerciais. O schema inclui o Instagram informado pela empresa.
+
+Validação: 14 testes Node de publicação/build passaram; 160 verificações de interações em DOM simulado passaram; 630 verificações locais de HTML, links, SEO e assets sem falhas. Verificação estrutural de responsividade e contraste concluída. GitHub main ff39ee28e6bf68469b74d76d43f4e362b6b1f99b conferido: os 32 arquivos recebidos correspondem exatamente à v1.9 anterior.
+
+Limites: não houve inspeção visual em navegador/dispositivo real, abertura real de WhatsApp/e-mail, confirmação do serviço Render ao vivo nem Search Console. Mensagens de e-mail muito longas dependem do cliente externo. Esta entrega mantém a aprovação manual de comentários e não instala pixels de anúncios.
+
+Para testar o build e a publicação: `node --test tests/comments.test.mjs tests/build.test.mjs`.
+
+## Revisão de composição v1.11
+
+Títulos da abertura e margens laterais passam a variar gradualmente no celular, evitando o salto de tipografia e largura entre 360 e 361 px. As páginas de serviço mantêm uma escala própria. Nome e bairro ficam em uma coluna até 480 px para oferecer mais espaço para digitar.
+
+Logo, menu, cards, legenda da foto, comentários, rodapé e botões conferidos pela cascata e por cálculos de largura em telas de 320 a 1280 px. Não houve inspeção visual em navegador/aparelho, e a interação da barra fixa com o teclado virtual permanece sem teste real. Aprovação por link continua adiada; o procedimento atual de comentários não foi alterado.

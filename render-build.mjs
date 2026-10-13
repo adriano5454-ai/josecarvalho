@@ -18,6 +18,10 @@ const target = new URL(process.env.SITE_URL || process.env.RENDER_EXTERNAL_URL |
 if (target.protocol !== 'https:' || target.username || target.password || target.search || target.hash || target.pathname !== '/') {
   throw new Error('SITE_URL must be an HTTPS origin, with no path, query, fragment or credentials.');
 }
+const hostPattern = /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)*[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
+if (target.hostname.length > 253 || !hostPattern.test(target.hostname) || target.port === '0') {
+  throw new Error('SITE_URL must use a valid domain name and port.');
+}
 const previous = new Set([current]);
 // Only explicitly approved and authorized comments can enter the published HTML.
 const approvedComments = renderApprovedComments(readApprovedComments(join(import.meta.dirname, 'content/comentarios-aprovados.json')));
@@ -27,11 +31,11 @@ for (const file of files.filter(file => file.endsWith('.html'))) {
 }
 for (const file of files) {
   let content = readFileSync(file, 'utf8');
+  for (const old of previous) content = content.split(old).join(target.origin);
   if (file.endsWith('.html')) {
     content = content.replace(/<!-- approved-comments:start -->[\s\S]*?<!-- approved-comments:end -->/g,
       () => '<!-- approved-comments:start -->' + approvedComments + '<!-- approved-comments:end -->');
   }
-  for (const old of previous) content = content.split(old).join(target.origin);
   writeFileSync(file, content);
 }
 console.log(`Static site ready: ${target.origin}; canonical URLs, schema, social metadata and sitemap aligned.`);

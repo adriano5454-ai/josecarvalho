@@ -47,6 +47,9 @@ if (form) {
       window.location.href = `https://wa.me/5521998222062?text=${encodeURIComponent(text)}`;
     }
   });
+  form.querySelectorAll('button[data-channel]').forEach(button => { button.disabled = false; });
+  const fallback = form.querySelector('[data-form-fallback]');
+  if (fallback) fallback.hidden = true;
 }
 
 const commentForm = document.querySelector('.comment-form');
@@ -63,7 +66,7 @@ if (commentForm) {
     commentInput.setCustomValidity(comment.length < 10 || comment.length > 1200 ? 'Escreva um comentário entre 10 e 1.200 caracteres.' : '');
     if (!commentForm.reportValidity()) return;
     const consent = data.get('autoriza_publicacao') === 'sim';
-    const lines = ['Olá, Zé! Quero compartilhar minha experiência com a LAVA MAIS.', '', `Nome para publicação: ${name}`];
+    const lines = ['Olá, Zé! Quero compartilhar minha experiência com a LAVA MAIS.', '', `Nome: ${name}`];
     lines.push('', `Comentário: ${comment}`, '', consent
       ? 'Autorizo a publicação do meu nome e comentário após aprovação.'
       : 'Não autorizo a publicação. Este comentário é um feedback privado.');
@@ -75,4 +78,6 @@ if (commentForm) {
     }
   });
   commentForm.querySelectorAll('button[data-channel]').forEach(button => { button.disabled = false; });
+  const fallback = commentForm.querySelector('[data-form-fallback]');
+  if (fallback) fallback.hidden = true;
 }

@@ -81,3 +81,8 @@
 
 /* Campos confortáveis nos celulares menores. */
 @media(max-width:480px){.field-row{grid-template-columns:1fr;gap:0}}
+
+/* Experiência por região, sem somar períodos. */
+.hero-copy>p.experience-regions{flex-wrap:wrap;gap:6px 12px}
+.experience-regions>span{display:inline-flex;align-items:baseline;gap:4px;white-space:nowrap}
+.experience-regions strong{font-size:16px;line-height:1.2}

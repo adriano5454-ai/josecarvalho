@@ -62,7 +62,7 @@ Caixa compacta com visual próprio, disponível na página inicial e nas quatro 
 
 ## Experiência e tecnologia v1.9
 
-Mais de 10 anos de experiência profissional, atendimento aos clientes mais exigentes e uso de equipamentos de alta tecnologia, conforme informações fornecidas pelo responsável. Destaque na abertura e em uma faixa de diferenciais nas cinco páginas comerciais; reforço na seção Nosso cuidado e nos metadados da página inicial. A experiência não foi usada como data de fundação do CNPJ. Agilidade no atendimento, sem promessas de prazo ou secagem imediata.
+Experiência profissional de 10 anos na Europa e 15 anos no Brasil, atendimento aos clientes mais exigentes e uso de equipamentos de alta tecnologia, conforme informações fornecidas pelo responsável. Destaque na abertura e em uma faixa de diferenciais nas cinco páginas comerciais; reforço na seção Nosso cuidado e nos metadados da página inicial. A experiência não foi usada como data de fundação do CNPJ. Agilidade no atendimento, sem promessas de prazo ou secagem imediata.
 
 ## Revisão geral v1.10
 
@@ -81,3 +81,7 @@ Para testar o build e a publicação: `node --test tests/comments.test.mjs tests
 Títulos da abertura e margens laterais passam a variar gradualmente no celular, evitando o salto de tipografia e largura entre 360 e 361 px. As páginas de serviço mantêm uma escala própria. Nome e bairro ficam em uma coluna até 480 px para oferecer mais espaço para digitar.
 
 Logo, menu, cards, legenda da foto, comentários, rodapé e botões conferidos pela cascata e por cálculos de largura em telas de 320 a 1280 px. Não houve inspeção visual em navegador/aparelho, e a interação da barra fixa com o teclado virtual permanece sem teste real. Aprovação por link continua adiada; o procedimento atual de comentários não foi alterado.
+
+## Experiência por região v1.12
+
+Destaque atualizado conforme informação do responsável: 10 anos na Europa e 15 anos no Brasil. Os dois períodos aparecem separadamente no selo da abertura, na faixa de diferenciais e no conteúdo e metadados pertinentes. Não foram somados em 25 anos nem usados como data de fundação do CNPJ; a área de atendimento permanece Rio de Janeiro. Selo com quebra entre regiões para acomodar telas pequenas.

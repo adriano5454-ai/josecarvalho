@@ -91,3 +91,7 @@ Destaque atualizado conforme informação do responsável: 10 anos na Europa e 1
 A abertura passa a destacar Limpeza de estofados, representando melhor o conjunto dos serviços. A rota e o conteúdo de Limpeza de sofás no Rio de Janeiro continuam próprios. A página inicial inclui escritórios, helicópteros, aviões e barcos em uma seção de ambientes com links de orçamento. As quatro opções adicionais estão disponíveis nos cinco formulários comerciais e no catálogo estruturado. Os textos descrevem limpeza de estofados e tecidos conforme avaliação; não afirmam manutenção, certificações ou limpeza técnica integral de aeronaves/embarcações.
 
 Mantidos: 10 anos de experiência na Europa, 15 anos no Brasil, atendimento personalizado a domicílio e cortinas a seco. Aprovação de comentários permanece manual; a solução por link continua adiada. Testes em DOM simulado e de build não substituem inspeção visual em navegador nem envio real por serviços externos.
+
+## Aviso visual v1.14
+
+Retirado o aviso de imagens ilustrativas abaixo dos serviços e dos links relacionados nas cinco páginas comerciais, conforme solicitação. A informação sobre as imagens na página de privacidade permanece correta.

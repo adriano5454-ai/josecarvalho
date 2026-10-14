@@ -86,3 +86,15 @@
 .hero-copy>p.experience-regions{flex-wrap:wrap;gap:6px 12px}
 .experience-regions>span{display:inline-flex;align-items:baseline;gap:4px;white-space:nowrap}
 .experience-regions strong{font-size:16px;line-height:1.2}
+
+/* Ambientes comerciais e serviços especiais. */
+.contexts-section{background:#EEF1E7;border-top:1px solid #d8ded2}
+.contexts-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.context-card{min-width:0;display:flex;flex-direction:column;align-items:flex-start;padding:24px;background:#F7F5ED;border:1px solid #d8ded2;border-radius:5px}
+.context-icon{display:grid;place-items:center;width:42px;height:42px;color:#2F897D;margin-bottom:20px}
+.context-icon svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.context-card h3{font-family:Georgia,serif;font-size:25px;line-height:1.25;margin-bottom:13px}
+.context-card p{font-size:13px;line-height:1.8;color:#596653;margin-bottom:22px}
+.context-card .text-link{margin-top:auto;font-size:12px;max-width:100%}
+@media(max-width:1000px){.contexts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.contexts-grid{grid-template-columns:1fr;gap:18px}.context-card{padding:24px}.context-icon{margin-bottom:14px}.context-card h3{font-size:25px}.context-card p{font-size:14px;margin-bottom:18px}}

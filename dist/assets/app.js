@@ -37,7 +37,7 @@ if (form) {
     const message = String(data.get('mensagem') || '').trim();
     const lines = ['Olá, Zé! Gostaria de solicitar um orçamento.', '', `Serviço: ${data.get('servico')}`];
     if (name) lines.push(`Nome: ${name}`);
-    if (bairro) lines.push(`Bairro / região: ${bairro}`);
+    if (bairro) lines.push(`Bairro / local: ${bairro}`);
     if (message) lines.push('', `Detalhes: ${message}`);
     lines.push('', 'Podemos conversar sobre a avaliação e a disponibilidade?');
     const text = lines.join('\n');

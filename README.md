@@ -85,3 +85,9 @@ Logo, menu, cards, legenda da foto, comentários, rodapé e botões conferidos p
 ## Experiência por região v1.12
 
 Destaque atualizado conforme informação do responsável: 10 anos na Europa e 15 anos no Brasil. Os dois períodos aparecem separadamente no selo da abertura, na faixa de diferenciais e no conteúdo e metadados pertinentes. Não foram somados em 25 anos nem usados como data de fundação do CNPJ; a área de atendimento permanece Rio de Janeiro. Selo com quebra entre regiões para acomodar telas pequenas.
+
+## Escritórios e serviços especiais v1.13
+
+A abertura passa a destacar Limpeza de estofados, representando melhor o conjunto dos serviços. A rota e o conteúdo de Limpeza de sofás no Rio de Janeiro continuam próprios. A página inicial inclui escritórios, helicópteros, aviões e barcos em uma seção de ambientes com links de orçamento. As quatro opções adicionais estão disponíveis nos cinco formulários comerciais e no catálogo estruturado. Os textos descrevem limpeza de estofados e tecidos conforme avaliação; não afirmam manutenção, certificações ou limpeza técnica integral de aeronaves/embarcações.
+
+Mantidos: 10 anos de experiência na Europa, 15 anos no Brasil, atendimento personalizado a domicílio e cortinas a seco. Aprovação de comentários permanece manual; a solução por link continua adiada. Testes em DOM simulado e de build não substituem inspeção visual em navegador nem envio real por serviços externos.
